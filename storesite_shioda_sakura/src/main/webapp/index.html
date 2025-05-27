@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>SHOP SITE</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+	<link rel="stylesheet" href="CSS/style.css">
+
+	<!---slickcss---->
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animatedmodal@1.0.0/animatedModal.min.css">
+
+</head>
+
+<body>
+	<header class="top" id="header">
+		<nav>
+			<ul>
+				<li><a href="index.html">TOP</a></li>
+				<li><a id="open-cart-modal">CART</a></li>
+			</ul>
+		</nav>
+		<h1 class="site-title">SHOPSITE</h1>
+	</header>
+
+	<main>
+		<div class="mainvisual">
+			<img src="img/bag.jpg" alt="画像">
+		</div>
+
+		<!---スライダー-->
+		<section class="slider-section">
+			<div class="slider">
+				<div class="slider-item"><img src="img/bag2.jpg" alt="スライド1"></div>
+				<div class="slider-item"><img src="img/logo.jpg" alt="スライド2"></div>
+				<div class="slider-item"><img src="img/lady.jpg" alt="スライド3"></div>
+			</div>
+		</section>
+
+		<!---セクション-->
+		<section id="products-section">
+			<h2>PRODUCT</h2>
+			<button id="sort-botton">PRICE HIGH</button>
+			<div class="products-container">
+				<div id="Blackprice" class="product" data-name="Black" data-price="10000">
+					<img src="img/blackbag.jpg" alt="Black">
+					<h3>Black</h3>
+					<p class="price">¥10,000</p>
+					<select class="quantity" id="quantity_black">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_Black()">カートに追加</button>
+				</div>
+		
+				<div id="Blueprice" class="product" data-name="BlueYellow" data-price="11000">
+					<img src="img/blue&Yellowbag.jpg" alt="Blue&Yellow">
+					<h3>Blue&Yellow</h3>
+					<p class="price">¥11,000</p>
+					<select class="quantity" id="quantity_blue">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_Blue()">カートに追加</button>
+				</div>
+		
+				<div id="Goldprice" class="product" data-name="Gold" data-price="12000">
+					<img src="img/goldbag.jpg" alt="Gold">
+					<h3>Gold</h3>
+					<p class="price">¥12,000</p>
+					<select class="quantity" id="quantity_gold">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_Gold()">カートに追加</button>
+				</div>
+		
+		
+				<div id="GrayOrangeprice" class="product" data-name="GrayOrange" data-price="12000">
+					<img src="img/gray&orange.jpg" alt="Gray&Orange">
+					<h3>Gray&Orange</h3>
+					<p class="price">¥12,000</p>
+					<select class="quantity" id="quantity_gray">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_Gray()">カートに追加</button>
+				</div>
+		
+		
+		
+				<div id="LightBlueprice" class="product" data-name="LightBlue" data-price="11000">
+					<img src="img/lightbluebag.jpg" alt="LightBlue">
+					<h3>LightBlue</h3>
+					<p class="price">¥11,000</p>
+					<select class="quantity" id="quantity_lightblue">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_Lightblue()">カートに追加</button>
+				</div>
+		
+		
+				<div id="Orangeprice" class="product" data-name="Orange" data-price="12000">
+					<img src="img/orangebag.jpg" alt="Orange">
+					<h3>Orange</h3>
+					<p class="price">¥12,000</p>
+					<select class="quantity" id="quantity_orange">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_Orange()">カートに追加</button>
+				</div>
+		
+				<div id="PinkGlitterprice" class="product" data-name="PinkGlitter" data-price="12000">
+					<img src="img/pinkglitterbag.jpg" alt="PinkGlitter">
+					<h3>PinkGlitter</h3>
+					<p class="price">¥12,000</p>
+					<select class="quantity" id="quantity_pinkglitter">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_PinkGlitter()">カートに追加</button>
+				</div>
+		
+		
+				<div id="Purpleprice" class="product" data-name="Purple" data-price="13000">
+					<img src="img/purplebag.jpg" alt="Purple">
+					<h3>Purple</h3>
+					<p class="price">¥13,000</p>
+					<select class="quantity" id="quantity_purple">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_Purple()">カートに追加</button>
+				</div>
+		
+		
+				<div id="RedPinkprice" class="product" data-name="Red&Pink" data-price="14000">
+					<img src="img/red&pinkbag.jpg" alt="Red&Pink">
+					<h3>Red&Pink</h3>
+					<p class="price">¥14,000</p>
+					<select class="quantity" id="quantity_redpink">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_RedPink()">カートに追加</button>
+				</div>
+		
+				<div id="Redprice" class="product" data-name="Red" data-price="14000">
+					<img src="img/redbag.jpg" alt="Red">
+					<h3>Red</h3>
+					<p class="price">¥14,000</p>
+					<select class="quantity" id="quantity_red">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_Red()">カートに追加</button>
+				</div>
+		
+				<div id="Whiteprice" class="product" data-name="White" data-price="14000">
+					<img src="img/whitebag.jpg" alt="White">
+					<h3>White</h3>
+					<p class="price">¥14,000</p>
+					<select class="quantity" id="quantity_white">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_White()">カートに追加</button>
+				</div>
+		
+				<div id="YellowBlackprice" class="product" data-name="Yellow&Black" data-price="14000">
+					<img src="img/Yellow&blackbag.jpg" alt="Yellow&Black">
+					<h3>Yellow&Black</h3>
+					<p class="price">¥14,000</p>
+					<select class="quantity" id="quantity_yellowblack">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					<button class="add-to-cart" onclick="addToCart_YellowBlack()">カートに追加</button>
+				</div>
+			</div>
+		
+		</section>
+
+
+		<section id="cart">
+			<div class="cart">
+				<h2 class="cart-title">カート</h2>
+				<p>Black：&yen;<span id="black_shokei">0</span></p>
+				<p>Blue&Yellow：&yen;<span id="blue_shokei">0</span></p>
+				<p>Gold：&yen;<span id="gold_shokei">0</span></p>
+				<p>Gray&Orange：&yen;<span id="gray_shokei">0</span></p>
+				<p>LightBlue：&yen;<span id="lightblue_shokei">0</span></p>
+				<p>Orange：&yen;<span id="orange_shokei">0</span></p>
+				<p>PinkGlitter：&yen;<span id="pinkglitter_shokei">0</span></p>
+				<p>Red&Pink：&yen;<span id="purple_shokei">0</span></p>
+				<p>Red：&yen;<span id="redpink_shokei">0</span></p>
+				<p>White：&yen;<span id="white_shokei">0</span></p>	
+				<p>Yellow&Black：&yen;<span id="yellowblack_shokei">0</span></p>		
+				<button class="total" onclick="total_calc()">合計</button>
+				<p>合計：&yen;<span id="total">0</span></p>
+			</div>
+		</section>
+
+
+
+		<section id="contact" class="wrapper">
+			<h2 class="sec-title">Contact</h2>
+			<form id="contact-form" action="#" method="post">
+				<dl>
+					<dt><label for="name">NAME</label></dt>
+					<dd><input type="text" id="name" name="your-name" required></dd>
+					<dt><label for="email">E-mail</label></dt>
+					<dd><input type="email" id="email" name="your-email" required></dd>
+					<dt><label for="message">MESSAGE</label></dt>
+					<dd><textarea id="message" name="your-message" required></textarea></dd>
+				</dl>
+				<div class="button">
+					<input type="submit" value="送信">
+				</div>
+			</form>
+		</section>
+
+		<!------カートリンクとモーダル追加!-->
+		<div id="cart-modal" class="animated-modal">
+			<div class="modal-contet">
+				<button id="close-cart-modal">×</button>
+				<h2>カートの中身</h2>
+				<div id="cart-products">×</div>
+				<p id="cart-total"></p>
+				<button id="clear-cart">カートを空にする</button>
+			</div>
+		</div>
+
+
+	</main>
+
+	<footer id="fotter">
+		&copy; SHOPSITE
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+</body>
+
+</html>

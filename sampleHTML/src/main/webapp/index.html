@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>getElementByIdの例</title>
+</head>
+<body>
+
+  <h1 id="title">こんにちは！</h1>
+  <button onclick="changeTitle()">タイトルを変える</button>
+
+  <script>
+    function changeTitle() {
+      // IDが"title"の要素を取得
+      const titleElement = document.getElementById("title");
+
+      // 中身のテキストを変更
+      titleElement.textContent = "タイトルが変わったよ！";
+    }
+  </script>
+
+</body>
+</html>

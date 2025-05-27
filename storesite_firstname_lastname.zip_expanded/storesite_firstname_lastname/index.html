@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>COFFEE</title>
+        <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキス">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--GoogleFonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+        <link rel="icon" href="img/favicon.ico">  
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- SlickのCSS（CDN） -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+        <!-- animatedModalのCSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animatedmodal@1.0.0/animatedModal.min.css">
+    </head>
+    <body>
+        <header class="top" id="header">
+            <nav>
+                <ul>
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a id="open-cart-modal">CART</a></li>
+                </ul>
+            </nav>
+            <h1 class="site-title"><img src="img/logo.svg" alt="COFFEE"></h1>
+        </header>
+
+        <main>
+            <!-- スライダーセクション -->
+            <section class="slider-section">
+                <h2>MENU</h2>
+                <div class="slider">
+                    <div class="slider-item"><img src="img/item-coffee.jpg" alt="コーヒー"><h3>コーヒー</h3></div>
+                    <div class="slider-item"><img src="img/item-cake.jpg" alt="ケーキ"><h3>ケーキ</h3></div>
+                    <div class="slider-item"><img src="img/item-cookie.jpg" alt="クッキー"><h3>クッキー</h3></div>
+                    <div class="slider-item"><img src="img/item-croissant.jpg" alt="クロワッサン"><h3>クロワッサン</h3></div>
+                    <div class="slider-item"><img src="img/item-iscream.jpg" alt="アイスクリーム"><h3>アイスクリーム</h3></div>
+                    <div class="slider-item"><img src="img/item-pancakes.jpg" alt="パンケーキ"><h3>パンケーキ</h3></div>
+                </div>
+            </section>
+
+            <!-- オンラインストアセクション -->
+            <section id="items-section">
+                <h2>ONLINE STORE</h2>
+                <button id="sort-btn">価格順 (昇順)</button>
+                <div class="items-container">
+                    <div class="item" data-name="コーヒー" data-price="500">
+                        <img src="img/item-coffee.jpg" alt="コーヒー">
+                        <h3>コーヒー</h3>
+                        <p class="price">¥500</p>
+                        <select class="quantity">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <button class="add-to-cart">カートに追加</button>
+                </div>
+                <div class="item" data-name="ケーキ" data-price="800">
+                    <img src="img/item-cake.jpg" alt="ケーキ">
+                    <h3>ケーキ</h3>
+                    <p class="price">¥800</p>
+                    <select class="quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <button class="add-to-cart">カートに追加</button>
+                </div>
+                <div class="item" data-name="クッキー" data-price="300">
+                    <img src="img/item-cookie.jpg" alt="クッキー">
+                    <h3>クッキー</h3>
+                    <p class="price">¥300</p>
+                    <select class="quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <button class="add-to-cart">カートに追加</button>
+                </div>
+            </section>
+
+            <!-- カートモーダル -->
+            <div id="cart-modal" class="animated-modal">
+                <div class="modal-content">
+                    <button id="close-cart-modal">×</button>
+                    <h2>カート</h2>
+                    <div id="cart-items"></div>
+                    <p id="cart-total"></p>
+                    <button id="clear-cart">カートを空にする</button>
+                </div>
+            </div>
+
+            <!-- フォームセクション -->
+            <section id="contact">
+                <h2>CONTACT</h2>
+                <form id="contact-form">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" required>
+                    <p class="error-message" id="error-name"></p>
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="error-message" id="error-email"></p>
+                    <label for="message">メッセージ</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <p class="error-message" id="error-message"></p>
+                    <button type="submit">送信</button>
+                </form>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <p>&copy; COFFEE</p>
+        </footer>
+
+        <!-- jQuery（Slickを使うために必要） -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+        <!-- SlickのJavaScript（CDN） -->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <!-- animatedModalのJavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/animatedmodal@1.0.0/animatedModal.min.js"></script>
+        <!-- カスタムJS -->
+        <script src="js/script.js"></script>
+    </body>
+</html>

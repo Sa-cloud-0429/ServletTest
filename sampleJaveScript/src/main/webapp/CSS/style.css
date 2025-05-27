@@ -1,0 +1,23 @@
+.accordion { 
+width: 300px; 
+margin: 20px auto;
+ border: 1px solid #ccc;
+ }  
+.accordion-header {
+ background: #007BFF; 
+color: white; 
+padding: 10px; 
+cursor: pointer; 
+border-bottom: 1px solid #ccc; 
+}  
+.accordion-header:hover {
+ background: #0056b3; 
+}  
+.accordion-content { 
+display: none; 
+padding: 10px; 
+background: #f0f0f0; 
+}  
+.active { 
+background: #0056b3; 
+}
